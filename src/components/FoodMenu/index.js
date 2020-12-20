@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Sidebar from '../Sidebar';
+import Navbar from '../Navbar';
 import { appetizerData } from './data';
 import {
   FoodMenuContainer,
@@ -15,9 +17,18 @@ import {
 
 const FoodMenu = () => {
   const data = appetizerData;
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <FoodMenuContainer>
-      <FoodHeading></FoodHeading>
+      <Navbar toggle={toggle} />
+      <Sidebar toggle={toggle} isOpen={isOpen} />
+      <FoodHeading>Tasty eats!</FoodHeading>
       <FoodWrapper>
         {data.map((item, index) => {
           return (
