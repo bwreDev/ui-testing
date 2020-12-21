@@ -1,23 +1,22 @@
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
-import { appetizerData, entreeData } from '../MenuData/foodData';
+import { houseCocktailData, houseBeerData } from '../MenuData/drinkData';
 import {
-	FoodMenuContainer,
-	FoodHeading,
-	FoodWrapper,
+	DrinkMenuContainer,
+	DrinkHeading,
+	DrinkWrapper,
 	MenuItemCard,
 	ItemInfo,
 	ItemTitle,
 	ItemDescription,
 	ItemPrice,
-	ItemButton,
 	ItemImage,
-} from './FoodMenuElements';
+} from './DrinkMenuElements';
 
-const FoodMenu = () => {
-	const data1 = appetizerData;
-	const data2 = entreeData;
+const DrinkMenu = () => {
+	const data1 = houseCocktailData;
+	const data2 = houseBeerData;
 
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -26,11 +25,11 @@ const FoodMenu = () => {
 	};
 
 	return (
-		<FoodMenuContainer>
+		<DrinkMenuContainer>
 			<Navbar toggle={toggle} />
 			<Sidebar toggle={toggle} isOpen={isOpen} />
-			<FoodHeading>Apps to Satisfy</FoodHeading>
-			<FoodWrapper>
+			<DrinkHeading>House Cocktails</DrinkHeading>
+			<DrinkWrapper>
 				{data1.map((item, index) => {
 					return (
 						<MenuItemCard key={index}>
@@ -39,14 +38,13 @@ const FoodMenu = () => {
 								<ItemTitle>{item.name}</ItemTitle>
 								<ItemDescription>{item.description}</ItemDescription>
 								<ItemPrice>{item.price}</ItemPrice>
-								<ItemButton>{item.button}</ItemButton>
 							</ItemInfo>
 						</MenuItemCard>
 					);
 				})}
-			</FoodWrapper>
-			<FoodHeading>Entrees</FoodHeading>
-			<FoodWrapper>
+			</DrinkWrapper>
+			<DrinkHeading>House Beers on Tap</DrinkHeading>
+			<DrinkWrapper>
 				{data2.map((item, index) => {
 					return (
 						<MenuItemCard key={index}>
@@ -55,14 +53,13 @@ const FoodMenu = () => {
 								<ItemTitle>{item.name}</ItemTitle>
 								<ItemDescription>{item.description}</ItemDescription>
 								<ItemPrice>{item.price}</ItemPrice>
-								<ItemButton>{item.button}</ItemButton>
 							</ItemInfo>
 						</MenuItemCard>
 					);
 				})}
-			</FoodWrapper>
-		</FoodMenuContainer>
+			</DrinkWrapper>
+		</DrinkMenuContainer>
 	);
 };
 
-export default FoodMenu;
+export default DrinkMenu;
