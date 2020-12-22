@@ -1,12 +1,11 @@
 import React from 'react';
-import { FeatureContainer, FeatureButton } from './FeatureElements';
+import { FeatureContainer } from './FeatureElements';
 
 const Feature = () => {
   return (
     <FeatureContainer>
       <h1>Special of the Day</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur</p>
-      <FeatureButton>Order Now</FeatureButton>
+      <p>Rotating list of specials.</p>
     </FeatureContainer>
   );
 };

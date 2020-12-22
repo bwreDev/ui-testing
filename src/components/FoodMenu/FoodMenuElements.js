@@ -14,6 +14,14 @@ export const FoodWrapper = styled.div`
   margin: 0 auto;
 `;
 
+export const FoodHeading = styled.h1`
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  padding: 0.5rem;
+`;
+
 export const MenuItemCard = styled.div`
   margin: 0 2rem;
   line-height: 2;
@@ -25,12 +33,6 @@ export const ItemImage = styled.img`
   min-width: 300px;
   max-width: 100%;
   box-shadow: 8px 8px #fdc500;
-`;
-
-export const FoodHeading = styled.h1`
-  font-size: clamp(2rem, 2.5vw, 3rem);
-  text-align: center;
-  margin-bottom: 5rem;
 `;
 
 export const ItemTitle = styled.h2`
