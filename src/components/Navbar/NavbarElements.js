@@ -5,12 +5,17 @@ import { FaBeer } from 'react-icons/fa';
 export const Nav = styled.nav`
   background: transparent;
   height: 80px;
+  padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: static;
 `;
 
 export const NavLink = styled(Link)`
   cursor: pointer;
+  font-family: 'Six Caps', sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(2.5rem, 10vw, 5rem);
 `;
 
 export const NavIcon = styled.div`

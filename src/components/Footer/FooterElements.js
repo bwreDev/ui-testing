@@ -41,6 +41,10 @@ export const SocialLogo = styled(Link)`
   align-items: center;
   margin-bottom: 16px;
   font-weight: bold;
+  h3 {
+    font-family: 'Six Caps', sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
 `;
 
 export const SocialIcons = styled.div`

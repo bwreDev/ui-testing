@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { specialData } from '../MenuData/foodData';
 import {
   SpecialMenuContainer,
