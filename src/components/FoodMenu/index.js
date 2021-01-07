@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
+import Footer from '../Footer';
 import { appetizerData, entreeData } from '../MenuData/foodData';
 import {
   FoodMenuContainer,
@@ -25,40 +26,47 @@ const FoodMenu = () => {
   };
 
   return (
-    <FoodMenuContainer>
-      <Navbar toggle={toggle} />
-      <Sidebar toggle={toggle} isOpen={isOpen} />
-      <FoodHeading>Apps to Satisfy</FoodHeading>
-      <FoodWrapper>
-        {data1.map((item, index) => {
-          return (
-            <MenuItemCard key={index}>
-              <ItemImage src={item.image} alt={item.alt} />
-              <ItemInfo>
-                <ItemTitle>{item.name}</ItemTitle>
-                <ItemDescription>{item.description}</ItemDescription>
-                <ItemPrice>{item.price}</ItemPrice>
-              </ItemInfo>
-            </MenuItemCard>
-          );
-        })}
-      </FoodWrapper>
-      <FoodHeading>Entrees</FoodHeading>
-      <FoodWrapper>
-        {data2.map((item, index) => {
-          return (
-            <MenuItemCard key={index}>
-              <ItemImage src={item.image} alt={item.alt} />
-              <ItemInfo>
-                <ItemTitle>{item.name}</ItemTitle>
-                <ItemDescription>{item.description}</ItemDescription>
-                <ItemPrice>{item.price}</ItemPrice>
-              </ItemInfo>
-            </MenuItemCard>
-          );
-        })}
-      </FoodWrapper>
-    </FoodMenuContainer>
+    <>
+      <FoodMenuContainer>
+        <Navbar toggle={toggle} />
+        <Sidebar toggle={toggle} isOpen={isOpen} />
+        <FoodHeading>Apps to Satisfy</FoodHeading>
+        <FoodWrapper>
+          {data1.map((item, index) => {
+            return (
+              <MenuItemCard key={index}>
+                <ItemImage src={item.image} alt={item.alt} />
+                <ItemInfo>
+                  <ItemTitle>{item.name}</ItemTitle>
+                  <ItemDescription>
+                    {item.description}
+                  </ItemDescription>
+                  <ItemPrice>{item.price}</ItemPrice>
+                </ItemInfo>
+              </MenuItemCard>
+            );
+          })}
+        </FoodWrapper>
+        <FoodHeading>Entrees</FoodHeading>
+        <FoodWrapper>
+          {data2.map((item, index) => {
+            return (
+              <MenuItemCard key={index}>
+                <ItemImage src={item.image} alt={item.alt} />
+                <ItemInfo>
+                  <ItemTitle>{item.name}</ItemTitle>
+                  <ItemDescription>
+                    {item.description}
+                  </ItemDescription>
+                  <ItemPrice>{item.price}</ItemPrice>
+                </ItemInfo>
+              </MenuItemCard>
+            );
+          })}
+        </FoodWrapper>
+      </FoodMenuContainer>
+      <Footer />
+    </>
   );
 };
 

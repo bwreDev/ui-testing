@@ -1,6 +1,6 @@
 import React from 'react';
 import { Nav, NavLink, NavIcon, Bars } from './NavbarElements';
-import Logo from '../../images/logo.jpg';
+import Logo from '../../images/Blast-Logo.svg';
 
 const Navbar = ({ toggle }) => {
   return (
@@ -8,6 +8,7 @@ const Navbar = ({ toggle }) => {
       <Nav>
         <NavLink to='/'>
           <img src={Logo} alt='Blast 825 Logo' />
+          Blast 825°
         </NavLink>
         <NavIcon onClick={toggle}>
           <Bars />

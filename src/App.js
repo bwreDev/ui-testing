@@ -8,17 +8,17 @@ import DrinkMenu from './components/DrinkMenu';
 import MerchMenu from './components/MerchMenu';
 
 function App() {
-	return (
-		<main className='App'>
-			<GlobalStyle />
-			<Switch>
-				<Route path='/' exact component={SplashPage} />
-				<Route path='/food' component={FoodMenu} />
-				<Route path='/drinks' component={DrinkMenu} />
-				<Route path='/merchandise' component={MerchMenu} />
-			</Switch>
-		</main>
-	);
+  return (
+    <main className='App'>
+      <GlobalStyle />
+      <Switch>
+        <Route path='/' exact component={SplashPage} />
+        <Route path='/food' component={FoodMenu} />
+        <Route path='/drinks' component={DrinkMenu} />
+        <Route path='/merchandise' component={MerchMenu} />
+      </Switch>
+    </main>
+  );
 }
 
 export default App;

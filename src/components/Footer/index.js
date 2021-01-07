@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaLinkedin,
 } from 'react-icons/fa';
+import Logo from '../../images/Blast-Logo.svg';
 import {
   FooterContainer,
   FooterWrap,
@@ -22,7 +23,16 @@ const Footer = () => {
       <FooterWrap>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/'>Blast 825°</SocialLogo>
+            <SocialIconLink
+              href='/'
+              target='_blank'
+              aria-label='Home'
+            >
+              <img src={Logo} alt='Blast Logo' />
+            </SocialIconLink>
+            <SocialLogo to='/'>
+              <h3>Blast 825°</h3>
+            </SocialLogo>
             <SocialIcons>
               <SocialIconLink
                 href='/'
